@@ -1,0 +1,17 @@
+.table-container {
+  margin: 20px 0;
+}
+
+.p-button {
+  margin: 5px;
+}
+
+p-table {
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}

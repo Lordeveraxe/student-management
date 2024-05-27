@@ -1,10 +1,22 @@
+// src/app/student-add/student-add.component.ts
+
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-student-add',
   templateUrl: './student-add.component.html',
-  styleUrl: './student-add.component.css'
+  styleUrls: ['./student-add.component.css']
 })
 export class StudentAddComponent {
+  student = { name: '', age: null, course: '', school: '' };
 
+  constructor(private studentService: StudentService, private router: Router) { }
+
+  addStudent(): void {
+    this.studentService.createStudent(this.student).subscribe(() => {
+      this.router.navigate(['/students']);
+    });
+  }
 }

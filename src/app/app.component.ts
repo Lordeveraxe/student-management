@@ -1,13 +1,29 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'student-management';
+  title = 'Student Management';
+
+  items = [
+    {
+      label: 'Students',
+      icon: 'pi pi-fw pi-users',
+      items: [
+        {
+          label: 'List',
+          icon: 'pi pi-fw pi-list',
+          routerLink: '/students'
+        },
+        {
+          label: 'Add',
+          icon: 'pi pi-fw pi-plus',
+          routerLink: '/student/add'
+        }
+      ]
+    }
+  ];
 }

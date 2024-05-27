@@ -1,1 +1,38 @@
-<p>student-add works!</p>
+<h2>Add Student</h2>
+<form (ngSubmit)="addStudent()" class="p-fluid">
+  <div class="p-field p-grid" style="margin-top: 2em;">
+    <div class="p-col">
+      <p-floatLabel>
+        <input id="name" pInputText [(ngModel)]="student.name" name="name" required>
+        <label for="name">Nombre</label>
+      </p-floatLabel>
+    </div>
+  </div>
+  <div class="p-field p-grid" style="margin-top: 2em;">
+    <div class="p-col">
+      <p-floatLabel>
+        <input id="age" pInputText type="number" [(ngModel)]="student.age" name="age" required>
+        <label for="age">Edad</label>
+      </p-floatLabel>
+    </div>
+  </div>
+  <div class="p-field p-grid" style="margin-top: 2em;">
+    <div class="p-col">
+      <p-floatLabel>
+        <input id="course" pInputText [(ngModel)]="student.course" name="course" required>
+        <label for="course">Curso</label>
+      </p-floatLabel>
+    </div>
+  </div>
+  <div class="p-field p-grid" style="margin-top: 2em;">
+    <div class="p-col">
+      <p-floatLabel>
+        <input id="school" pInputText [(ngModel)]="student.school" name="school" required>
+        <label for="school">Colegio</label>
+      </p-floatLabel>
+    </div>
+  </div>
+  <div class="p-field">
+    <button pButton type="submit" label="Agregar" class="p-button-raised p-button-rounded p-button-success"></button>
+  </div>
+</form>
